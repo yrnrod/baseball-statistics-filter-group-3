@@ -6,6 +6,7 @@ using namespace std;
 
 //Mutators
 
+//Set Functions
 void BaseballStatistic::setFirstName(string fName){
     firstName = fName;
 }
@@ -60,4 +61,62 @@ void BaseballStatistic::setOPS(double onBasePlusSlugging){
 
 void BaseballStatistic::setERA(double earnedRunAverage){
     era = earnedRunAverage;
+}
+
+//Get functions
+
+string BaseballStatistic::getFirstName()const{
+    return firstName;
+}
+
+string BaseballStatistic::getLastName()const{
+    return lastName;
+}
+
+string BaseballStatistic::getTeamName()const{
+    return teamName;
+}
+
+int BaseballStatistic::getJerseyNum()const{
+    return jerseyNum;
+}
+
+string BaseballStatistic::getPosition()const{
+    return position;
+}
+
+char BaseballStatistic::getBatting()const{
+    return batting;
+}
+
+char BaseballStatistic::getThrowing()const{
+    return throwing;
+}
+
+int BaseballStatistic::getAtBats()const{
+    return atBats;
+}
+
+double BaseballStatistic::getBattingAverage()const{
+    return battingAverage;
+}
+
+int BaseballStatistic::getHR()const{
+    return hr;
+}
+
+int BaseballStatistic::getRBI()const{
+    return rbi;
+}
+
+int BaseballStatistic::getSB()const{
+    return sb;
+}
+
+double BaseballStatistic::getOPS()const{
+    return ops;
+}
+
+double BaseballStatistic::getERA()const{
+    return era;
 }
