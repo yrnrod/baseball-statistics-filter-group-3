@@ -4,6 +4,32 @@
 
 using namespace std;
 
+//Default constructor
+
+BaseballStatistic::BaseballStatistic (string fName, string lName, string tN, int jN,
+string pos, int atBat , int homeRun, int runsBattedIn, char bat, char thrower, int esbee, double batAvg, int year,
+int month, int day, double opss, double eraa){
+                fName = getFirstName();
+                lName = getLastName();
+                tN = getTeamName();
+                jN = getJerseyNum();
+                pos = getPosition();
+                atBat = getAtBats();
+                homeRun = getHR();
+                runsBattedIn = getRBI();
+                bat = getBatting();
+                thrower = getThrowing();
+                esbee = getSB();
+                batAvg = getBattingAverage();
+                opss = getOPS();
+                eraa = getERA();
+                year = BaseballStatistic::dob->getYear();
+                month = BaseballStatistic::dob->getMonth();
+                day = BaseballStatistic::dob->getDay();
+
+}
+
+
 //Mutators
 
 //Set Functions
