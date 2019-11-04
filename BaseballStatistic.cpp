@@ -1,31 +1,35 @@
-#include "Date.h"
+#include <iostream>
 #include <string>
+#include <fstream>
+#include <vector>
+
 #include "BaseballStatistic.h"
+#include "Date.h"
+#include "Filter.h"
 
 using namespace std;
 
 //Default constructor
 
 BaseballStatistic::BaseballStatistic (string fName, string lName, string tN, int jN,
-string pos, int atBat , int homeRun, int runsBattedIn, char bat, char thrower, int esbee, double batAvg, int year,
-int month, int day, double opss, double eraa){
-                fName = getFirstName();
-                lName = getLastName();
-                tN = getTeamName();
-                jN = getJerseyNum();
-                pos = getPosition();
-                atBat = getAtBats();
-                homeRun = getHR();
-                runsBattedIn = getRBI();
-                bat = getBatting();
-                thrower = getThrowing();
-                esbee = getSB();
-                batAvg = getBattingAverage();
-                opss = getOPS();
-                eraa = getERA();
-                year = BaseballStatistic::dob->getYear();
-                month = BaseballStatistic::dob->getMonth();
-                day = BaseballStatistic::dob->getDay();
+string pos, int atBat , int homeRun, int runsBattedIn, char bat, char thrower, int esbee, double batAvg, int y,
+int m, int d, double opss, double eraa){
+                firstName = fName;
+                lastName = lName;
+                teamName = tN;
+                jerseyNum = jN;
+                position = pos;
+                atBats = atBat;
+                hr = homeRun;
+                rbi = runsBattedIn;
+                batting = bat;
+                throwing = thrower;
+                sb = esbee;
+                battingAverage = batAvg;
+                ops = opss;
+                era = eraa;
+                dob = new Date(y, m, d);
+              
 
 }
 
@@ -145,4 +149,10 @@ double BaseballStatistic::getOPS()const{
 
 double BaseballStatistic::getERA()const{
     return era;
+}
+
+//Print function
+
+void BaseballStatistic::print()const{
+   cout << getLastName() << " " << getFirstName() << " " << dob->getDay() << " " << endl;
 }

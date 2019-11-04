@@ -3,6 +3,7 @@
 
 #include "Date.h"
 #include <string>
+#include <vector>
 
 
 class BaseballStatistic
@@ -72,6 +73,7 @@ class BaseballStatistic
 		
 		//prints a single statistic row to the terminal
 		void print()const;
+
 		
 		
 };
